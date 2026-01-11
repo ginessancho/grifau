@@ -1,7 +1,6 @@
 'use client';
 
 import { useState, FormEvent } from 'react';
-import Image from 'next/image';
 
 export default function Home() {
   const [email, setEmail] = useState('');
@@ -74,14 +73,18 @@ export default function Home() {
               </a>
             </div>
             <div className="hero-image-container animate-fade-in-delay">
-              <Image
-                src="/faucet-hero.png"
-                alt="GRIFAU Premium Faucet"
-                width={600}
-                height={600}
+              <video
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="auto"
                 className="hero-image animate-float"
-                priority
-              />
+                poster="/faucet-hero.png"
+              >
+                <source src="/faucet-hero.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
             </div>
           </div>
         </div>
